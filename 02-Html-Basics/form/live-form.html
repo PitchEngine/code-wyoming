@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Sample forms</h1>
+    <h2>
+        "get" form
+    </h2>
+    <form action="//192.168.123.126:3000/getdemo" method="get">
+        <label>input1</label>
+        <input name="input1" type="text">
+        <label for="">input2</label>
+        <input type="text" name="input2">
+        <label for="">password</label>
+        <input type="password" name="password">
+        <p>There's a hidden input with name "hidden" and value "meow"</p>
+        <input type="hidden" name="hidden" value="meow">
+        <input type="submit" value="submit via get">
+    </form>
+
+    <hr/>
+
+    <h2>"post" form</h2>
+    <form action="//192.168.123.126:3000/postdemo" method="post">
+        <label>input1</label>
+        <input name="input1" type="text">
+        <label for="">input2</label>
+        <input type="text" name="input2">
+        <label for="">password</label>
+        <input type="password" name="password">
+        <p>There's a hidden input with name "hidden" and value "meow"</p>
+        <input type="hidden" name="hidden" value="meow">
+        <input type="submit" value="submit via post">
+    </form>
+</body>
+
+</html>

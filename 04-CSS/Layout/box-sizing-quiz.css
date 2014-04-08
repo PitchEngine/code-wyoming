@@ -1,0 +1,22 @@
+*{
+     margin:0; padding:0;   
+}
+p{
+    margin:10px;
+}
+.box{
+    background:#AFF;
+    margin-left:1%;
+    margin-right:2%;
+    border-right-width:2px;
+    border-top-width:5px;
+    border-left:1px solid red;
+    padding:2px 4px;
+    width: 30%;
+    height: 100px;
+    /* What's the box's dimensions for each of the following box-sizing values? */
+    /* box-sizing:content-box; */
+    box-sizing:border-box;
+    /* What is the box's dimensions without the "box-sizing" property specified? */
+
+}

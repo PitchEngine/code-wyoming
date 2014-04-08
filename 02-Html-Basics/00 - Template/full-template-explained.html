@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Explanation of HTML Template</title>
+</head>
+
+<body>
+    <h1>The Standard Html Template</h1>
+    <pre>
+        &lt;!doctype html&gt; 
+        &lt;html lang="en"&gt; 
+        &lt;head&gt; 
+            &lt;meta charset="UTF-8"&gt; 
+            &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; 
+        &lt;body&gt; 
+        &lt;/body&gt; 
+        &lt;/html&gt;
+    </pre>
+    <dl>
+        <dt>Doctype</dt>
+        <dd><p>
+            The document type is always the first thing on the page. It's a very unique tag in that it starts with an exclamation point. Its job is to say which version of HTML we're using. In this case, HTML5, we just say html. Older versions of html had very complicated doctypes, like Html4 Transitional's doctype:
+                <br>
+                <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code>
+        </p>
+            <p>Let's all just be happy we're using Html5.</p></dd>
+        <dt>html</dt>
+        <dd>The
+            <code>html</code>&nbsp;tag is the penultimate tag. It wraps everyone else up, but typically we don't do much with it. In this case, it has an attribute, "lang" (for language), that let's the browser know that the content of the page is written in English.</dd>
+        <dt>head</dt>
+        <dd>
+            <p>This is where we add information about the document, but not things we want displayed within the webpage itself.</p>
+            <p>Examples include: styles, scripts, and meta tags</p>
+        </dd>
+        <dt>meta</dt>
+        <dd>The meta tag can do a lot of jobs for our webpage. It contains "meta-information", as in, information about the webpage itself. One meta tag we always include is the a meta tag to specify what character set, or "charset", the webpage uses. This makes it easier for the browser to decode our text.</dd>
+        <dt>title</dt>
+        <dd>Whatever text is in here will be displayed in the tab for your webpage up at the top. Every webpage should have one, and only one, and it always goes in the head.</dd>
+        <dt>body</dt>
+        <dd>This is the tag that does the main bit of work for us. It holds everything we want to show the user. It houses our content, and so will be where we spend most of our time on each page.</dd>
+    </dl>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Playground</title>
+    <style>
+        /*Default, not checked */
+        input + label .fa-dot-cirlce-o{
+            display:none;
+        }
+        input:checked + label .fa-dot-circle-o{
+            display:inline-block;
+        }
+        input:checked + label .fa-circle-o{
+            display:none;
+        }
+        input[type="radio"]{
+            /* display:none; */
+        }
+        input[type="radio"]:checked + label
+        {
+            font-weight:bold;    
+        
+        }
+        span{
+            width:50px; height:16px;
+            display:inline-block;
+            background-image:url("//placedog.com/50/16");
+        }
+        input[type="radio"]:checked + label + span{
+            border:2px solid yellow;
+            
+        }
+    </style>
+
+</head>
+<!-- Code in here will probably change from day to day -->
+
+<body>
+    <input id="example" type="text">
+    <label for="example">
+        <i class="fa fa-circle-o"></i>
+        <i class="fa fa-dot-circle-o"></i>
+    </label>
+
+
+
+    <h1>Code Wyoming's Inaugural People Searcher</h1>
+    <form action="//192.168.123.126:3000/students" method="get">
+        <fieldset>
+            <legend>order</legend>
+            <input type="radio" name="order" value="desc" id="desc">
+            <br>
+            <label for="ascend">Ascending</label>
+            <input type="radio" name="order" value="asc" id="ascend">
+            <br>
+            <label for="lasc">Ascending, Last Name</label>
+            <input type="radio" name="order" value="lasc" id="lasc">
+            <br>
+            <label for="ldesc">Descending, Last Name</label>
+            <input type="radio" name="order" value="ldsc" id="ldesc">
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>simple search</legend>
+            <label for="contains">First or Last name contains:</label>
+            <input id="contains" type="text" name="contains">
+            <br>OR
+            <br>
+            <label for="startsWith">First or last name starts with:</label>
+            <input type="text" name="startsWith">
+            <br>OR
+            <br>
+            <label for="endsWith">First or last name ends with:</label>
+            <input type="text" name="endsWith">
+        </fieldset>
+
+        <fieldset>
+            <legend>city</legend>
+            <input type="radio" id="lander" name="city" value="Lander">
+            <label for="lander">Lander
+                <span></span>
+            </label>
+            <br>
+            <input type="radio" id="riverton" name="city" value="Riverton">
+            <label for="riverton">Riverton
+                <span></span>
+            </label>
+            <br>
+            <input type="radio" id="hudson" name="city" value="Hudson">
+            <label for="hudson">Hudson
+                <span></span>
+            </label>
+            <br>
+            <input type="radio" id="wash" name="city" value="Ft. Washakie">
+            <label for="wash">Washakie
+                <span></span>
+            </label>
+            <label for="desc">Descending</label>
+            <br>
+        </fieldset>
+
+        <br>
+        <input type="submit" value="search">
+    </form>
+    <!-- 
+    <form action="//192.168.123.126:3000/formdemo" method="post">
+        <h1>Checkout</h1>
+        
+        <fieldset>
+            <legend>Shipping Address</legend>
+            Name
+            <input type="text" name="name" placeholder="Type your name" value="Matt Enlow" disabled="disabled">
+            <span><br>Account password
+                <input type="password" id="pw"  name="pasword" maxlength="8"></span>
+            <div>
+                <br>Address
+                <input type="text" id="address" name="address1" value="203 Comanche">
+            </div>
+            <p>
+                City
+                <input type="text" name="city" value="Riverton">
+            </p>
+            <select name="state">
+                <option value="">Select a state</option>
+                <option value="CO">Colorado</option>
+                <option selected="selected" value="WY">Wyoming</option>
+            </select>
+        </fieldset>
+        
+        
+        
+        <br>Is your shipping address the same as your billing address?
+        
+        
+        <br> <label for="shipping-yes">Yes</label>
+        <input type="radio" id="shipping-yes" name="shipping-is-the-same" value="yes"><br>
+        <label for="shipping-no">No</label>
+        
+        
+        
+        
+        
+        
+        
+        
+        <input id="shipping-no" type="radio" name="shipping-is-the-same" value="no">
+        
+        
+        
+        
+        
+        
+        <input type="hidden" id="toggle" name="times-toggled-gift-wrap" value="0">
+        <br><label for="wrap-checker">Check this for gift wrapping</label>.
+        <input value="yes" type="checkbox" name="gift" id="wrap-checker">
+        <br>What should we write on the gift paper?
+        <textarea name="" id="textarea" disabled></textarea>
+        <br>
+        Look ma, it's a<input type="button" name="meow" value=" a, a button!">
+        <br>
+        Look pa it's a better button!<button type="button">Text+img<img src="//lorempixel.com/10/10" alt=""></button>
+        <br>
+        <input type="submit" value="Google search">
+        <input type="reset" value="Reset to Matt Enlow">
+        <input id="time" type="hidden" name="time-from-load-to-submit" value="0">
+        <br><br><br><br>
+        <input type="date" name="date">
+        <input type="email" name="email">
+        
+        
+        <input type="color" name="color" id="color">
+    </form>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        var pageLoaded = Date.now();
+        $("#pw").keyup(function(e){
+            $this = $(this);
+            var val = $this.val();
+            if(val.length >= 8){
+                $("#address").focus();
+            }
+        });
+        $('#color').change(function(e){
+            console.log($("#color").val());
+            $('body').css("background-color", $("#color").val());
+        });
+        $('input[type="submit"]').click(function(e){
+            $("#time").val(Date.now() - pageLoaded);
+        });
+        $("#wrap-checker").click(function(e){
+            $hidden = $('#toggle');
+            $hidden.val(parseInt($hidden.val()) + 1);
+            $checker = $("#wrap-checker:checked");
+            if($checker.length > 0){
+                $("#textarea").removeAttr("disabled");
+            }
+            else{
+                $("#textarea").attr("disabled", true);
+            }
+        });
+    </script> -->
+
+
+</body>
+
+</html>

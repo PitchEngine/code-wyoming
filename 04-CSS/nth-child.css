@@ -1,0 +1,46 @@
+
+p:first-letter{
+    font-size:1.5em;
+    background-color:#EEE;
+    font-family:cursive;
+    
+}
+
+p:first-line{
+    font-size:1.2em;   
+}
+div{
+    border:1px solid black;
+}
+
+/*   >  +     ~      */
+div ~ p{ /*   Any sibling    */
+    background:#444;
+}
+
+
+div + p {   /* Immediate sibling */
+    color:gray;
+}
+div > p { /* Immediate children */}
+div p { /* Any child, no matter how many layers of nesting */ }  
+h1:hover{
+    
+    color:red;
+}
+
+
+a{
+    color:orange;
+    
+}
+
+
+li:nth-child(even):hover {
+	color: white;
+	background-color: black;
+}
+
+li:after{
+    content:"#"
+}

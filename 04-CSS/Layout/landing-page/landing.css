@@ -1,0 +1,266 @@
+html,
+body,
+header,
+section,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+input,
+textarea,
+time,
+img,
+ul,
+li,
+label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+===================WIDGETS============================
+*/
+
+span.spinner {
+    /* Spinner's are suppose to be span elements */
+    padding: 1px;
+    margin: 1px;
+    display: inline-block;
+    border: 1px solid #888;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+span.spinner.spinner-active {
+    background-color: #A1A1FF;
+}
+.button {
+    background: #77D;
+    border-radius: 3px;
+    padding: .5em 1em;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+/*
+===================HEADER==============================
+*/
+
+header {
+    width: 100%;
+    height: 20em;
+    background-image: url("http://placebear.com/1400/300");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+}
+header img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 150px;
+    /* height: auto; */
+}
+header nav li {
+    display: inline-block;
+    list-style: none;
+    width: 10%;
+    min-width: 60px;
+    margin-top: 15px;
+}
+header nav li a {
+    color: white;
+    /*default: blue */
+    text-decoration: none;
+}
+header h1,
+header h2,
+header h3,
+header h4,
+header h5 {
+    position: relative;
+    top: 35%;
+}
+header h4 {
+    margin-top: 40px;
+}
+header h4 a {
+    color: white;
+    text-decoration: none;
+}
+/*
+===================CENTERING CONTENT==============================
+*/
+
+.row {
+    width: 80%;
+    margin: 4% auto;
+}
+.row:after { /*fixes collapse on float*/
+    clear: both;
+    content: "";
+    display: block;
+}
+section {
+    height: 300px;
+    border: 0.1em solid #888;
+    border-radius: 3px;
+    position: relative;
+    box-shadow:2px 2px 5px 0px #444;
+}
+section p {
+    max-height: 200px;
+    overflow: hidden;
+}
+/*
+===============CAMPAIGN=================
+*/
+
+.campaign {
+    text-align: center;
+}
+.campaign h1,
+.campaign p {
+    padding: 10px;
+    margin-right: 310px;
+    text-align: justify;
+}
+.campaign h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+.campaign p {
+    max-height: 150px;
+}
+.campaign a {
+    margin-right: 300px;
+}
+.campaign img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.campaign .button {
+    position: relative;
+    bottom: 30%;
+}
+.campaign .spinners {
+    width: 6em;
+    height: 1.5em;
+    position: absolute;
+    bottom: 20px;
+    right: 320px;
+}
+
+.campaign:nth-of-type(even) h1,
+.campaign:nth-of-type(even) p{
+    margin-left:310px;
+    margin-right:0;
+}
+.campaign:nth-of-type(even) a{
+    margin-left:300px;
+    margin-right:0;
+}
+.campaign:nth-of-type(even) img{
+    left:0;
+}
+.campaign:nth-of-type(even) .spinners{
+     left:320px;   
+}
+/*
+======================= DONATE & PERSON ROW =======================
+*/
+
+#donate,
+.person {
+    float: left;
+}
+section#donate {
+    width: 40%;
+    vertical-align: top;
+}
+section.person {
+    width: 25%;
+    margin-left: 5%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.person img {
+    position: absolute;
+    left: -25px;
+    top: 25px;
+}
+.person span {
+    position: absolute;
+    bottom: 0;
+}
+/*
+=============== NEWS =================
+*/
+
+#news.row {
+    border-top: 2px solid #888;
+    margin-top: 3%;
+}
+#news > h1 {
+    position: relative;
+    margin: 0 auto;
+    width: 5em;
+    top: -.6em;
+    background: white;
+    text-align: center;
+}
+#news section {
+    width: 30%;
+    float: left;
+}
+#news section:nth-of-type(2) {
+    margin: 0 5%;
+}
+#news section img {
+    width: 100%;
+}
+#news section {
+    height: auto;
+}
+/*
+======================== FOOTER ========================
+*/
+
+footer img {
+    width: 10%;
+    max-width: 150px;
+    margin-right: 5%
+}
+footer li {
+    border-bottom: 1px solid #888;
+    list-style: none;
+}
+footer .footer-block {
+    vertical-align: top;
+    display: inline-block;
+    width: 20%;
+    margin-right: 5%;
+}
+span.social-facebook {
+    background-image: url(http://www.mayecreate.com/wp-content/uploads/2013/12/facebook_new.png);
+    background-size: contain;
+    display: block;
+    width:60px;
+    height:60px;
+}
+#copyright {
+    float: right;
+    text-align: right;
+}

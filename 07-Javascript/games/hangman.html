@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <style>
+        .display span{
+            width:10px;
+            margin:0 5px;
+            display:inline-block;
+        }
+        .display .blank{
+            border-bottom:1px solid black;
+        }
+        .hidden{
+            display:none;
+        }
+        .wrapper{
+            margin: 100px auto;
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            width:400px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="start hidden">
+        
+            <input id="pw" type="password" placeholder="Enter word or phrase to be guessed">
+            <button>Set Word</button>
+        </div>
+        <div class="game hidden">
+            <div class="hangman">Failures: <span></span></div>
+            <div class="display">
+        
+            </div>
+            <div>
+                <input type="text" maxlength="1" id="guess" placeholder="try a letter">
+                <button>Try Letter</button>
+            </div>
+        </div>
+        <button id="newGame">New Game</button>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        var $hangman = $('.hangman span');
+        var $word = $('#pw');
+        var $guess = $('#guess');
+        var $newGame = $('#newGame');
+        var $display = $('.display');
+        var $start = $('.start');
+        var $game = $('.game');
+        var word, guesses, failures;
+        reset();
+        function reset(){
+            word = "";
+            guesses = [];
+            failures = 0;
+            $display.html("");
+            $hangman.text("");
+            $game.addClass('hidden');
+            $start.addClass('hidden');
+            $newGame.removeClass('hidden');
+        }
+        function game(){
+            console.log("Starting game");
+            $start.removeClass('hidden');
+            
+            $newGame.addClass('hidden');
+            //buttons clicked
+            $word.siblings().first().click(setWord);
+        
+            function setWord(){
+                console.log("setting word");
+                function doGuess(){
+                    var guess = $guess.val();
+                    $guess.val("");
+                    if (guesses.indexOf(guess) != -1){
+                        alert("You already guessed " + guess);
+                    }
+                    else if(guess.length){
+                        if(word.indexOf(guess) == -1){
+                            failures ++;
+                            $hangman.text(failures);
+                        }else{
+                            for(var i = word.indexOf(guess); 
+                                i != -1; 
+                                i = word.indexOf(guess, i+1)){
+                        $($display.children()[i])                                .removeClass('blank').addClass('letter').text(guess);
+                            }
+                        }
+                        guesses.push(guess);
+                        checkWinLose();
+                    }
+                }
+                if($word.val()){
+                    $hangman.text(failures);
+                    $start.addClass('hidden');
+                    word = $word.val().toLowerCase();
+                    $word.val("");
+                    console.log("word set");
+                    for(var i = 0; i < word.length; i++){
+                        if(word.charAt(i) != ' ')
+                            $display.append('<span class="blank"></span>');
+                        else
+                            $display.append('<span class="space"></span>');
+                    }
+                    $game.removeClass('hidden');
+                    $guess.siblings().first().click(doGuess);    
+                }
+                else{
+                    alert("Please enter a word.");
+                }   
+            }
+        }
+        function checkWinLose(){
+            if(failures >= 5){
+                alert("you lose");
+                reset();
+            }
+            else if ($display.children(".blank").length == 0){
+                alert("you win!")
+                reset();
+            }
+        }
+        $newGame.click(game);
+    </script>
+</body>
+
+</html>

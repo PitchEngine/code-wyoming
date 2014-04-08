@@ -1,0 +1,44 @@
+/* MAKES THINGS MUCH MORE STRAIGHT-FORWARD */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+body,
+html,
+a {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 100%;
+}
+.row1 {
+    background-color: black;
+}
+.content {
+    width: 960px;
+    margin: 0 auto;
+    clear: both;
+}
+/**===================== THIS MATTERS =====================**/
+.content:after {
+    
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix{
+     clear:both;   
+}
+hgroup {
+    float: left;
+}
+nav {
+    float: right;
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Gallery</title>
+    <style>
+        .thumb{width:150px; height:auto;}
+        .full{width:500px; height: auto;}
+        
+        #gallery{ 
+            position: relative; 
+            width:80%;
+            margin:0 auto;
+        }
+        #gallery ul{ 
+            width: 300px; 
+            list-style-type:none;
+        }
+        #gallery li{ 
+            padding:10px;
+        }
+        #gallery img {
+            border-style:none;    
+        }
+        #gallery a{
+            text-decoration:none;
+            color:#333;
+            font-style:italic;
+        }
+        
+        /** The Magic **/
+        #gallery span{
+            display:none;
+        }
+        
+        #gallery li:hover span{ /*compare with a:hover */
+            display:block;
+            position:absolute;
+            right:0px;
+            top:10px;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        <a href="//unsplash.com">Unsplash</a> Image Gallery</h1>
+    <div id="gallery">
+        <!-- Created with the following emmet command:
+                ul>(li>a[href="../../img/unsplash$.jpg"]>(img.thumb[src="../../img/unsplash$_th.jpg" alt="unsplash$ thumb"]+(span>img.full[src="../../img/unsplash$.jpg" alt="unsplash$"]+br+{Unsplash #$})))*4
+            Note that your href & src values will be different based on where you put the photos. 
+            
+            -->
+
+        <ul>
+            <li>
+                <a href="../../img/unsplash1.jpg">
+                    <img src="../../img/unsplash1_th.jpg" alt="unsplash1 thumb" class="thumb">
+                    <span>
+                        <img src="../../img/unsplash1.jpg" alt="unsplash1" class="full">
+                        <br>Unsplash #1</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../img/unsplash2.jpg">
+                    <img src="../../img/unsplash2_th.jpg" alt="unsplash2 thumb" class="thumb">
+                    <span>
+                        <img src="../../img/unsplash2.jpg" alt="unsplash2" class="full">
+                        <br>Unsplash #2</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../img/unsplash3.jpg">
+                    <img src="../../img/unsplash3_th.jpg" alt="unsplash3 thumb" class="thumb">
+                    <span>
+                        <img src="../../img/unsplash3.jpg" alt="unsplash3" class="full">
+                        <br>Unsplash #3</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../img/unsplash4.jpg">
+                    <img src="../../img/unsplash4_th.jpg" alt="unsplash4 thumb" class="thumb">
+                    <span>
+                        <img src="../../img/unsplash4.jpg" alt="unsplash4" class="full">
+                        <br>Unsplash #4</span>
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

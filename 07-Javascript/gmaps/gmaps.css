@@ -1,0 +1,236 @@
+body {
+    background-image: url(http://www.novaugust.net/blog/wp-content/uploads/2012/10/IMG_2504_1.jpg);
+    background-size: cover;
+}
+ul {
+    list-style: none;
+}
+.hidden {
+    display: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.abs {
+    position: absolute;
+}
+.top {
+    top: 30px;
+}
+.bottom {
+    bottom: 30px;
+}
+.right {
+    right: 30px;
+}
+.left {
+    left: 50px;
+}
+#search .bar {
+    box-shadow: 3px 3px 15px -2px;
+    padding: 0;
+    margin: 0;
+    width: 480px;
+}
+#search button i {
+    font-size: 1.2em;
+}
+#search input {
+    background-image: linear-gradient(to bottom, rgba(200, 200, 200, .3), rgba(255, 255, 255, 1));
+    border: 1px solid rgba(0, 0, 0, .3);
+    margin: 0;
+    padding: 5px;
+    width: 400px;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 2px;
+}
+#search button {
+    background: blue linear-gradient(to bottom, #55F, #00F);
+    color: white;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: 30px;
+    margin: 0;
+    position: relative;
+    border: none;
+    left: -4px;
+    margin-right: -4px;
+    width: 80px;
+}
+.searches {
+    background-color: #FEFEFE;
+    padding: 4px 40px;
+}
+.directions {
+    background-color: #EEE;
+    margin-top: 10px;
+}
+.directions.hidden:hover {
+    display: block;
+}
+.directions a {
+    color: blue;
+}
+.directions img {
+    float: left;
+    padding-left: 30px;
+    width: 100px;
+}
+.directions > div:first-child {
+    width: 370px
+}
+.directions i.fa {
+    color: #66D;
+}
+.directions > div {
+    display: inline-block;
+}
+.directions > div + div {
+    width: 100px;
+    box-sizing: border-box;
+    border-left: 1px solid rgba(0, 0, 0, .3);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.directions > div + div i {
+    display: block;
+}
+.directions:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+#social {
+    z-index: -5;
+}
+#social ul {
+    padding: 0;
+    margin: 0;
+}
+#social li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+}
+#social li:first-child {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+#social button {
+    height: 30px;
+    box-sizing: border-box;
+    padding: 0 12px;
+    box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, .75);
+}
+#social img {
+    border-radius: 50%;
+    height: 40px;
+    width: auto;
+}
+#social i.fa {
+    font-size: 1.4em;
+}
+figure {
+    position: relative;
+    margin: 0;
+}
+figure img {
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 2px;
+    padding: 3px;
+    background-color: white;
+}
+figure figcaption {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    color: white;
+}
+#more .lower {
+    clear: both;
+}
+#more .lower > div {
+    display: inline-block;
+    height: 40px;
+}
+#more .lower > div ul {
+    margin: 0;
+    padding: 0;
+}
+#more .lower li {
+    display: inline-block;
+}
+#more .lower .fa {
+    font-size: 1.3em;
+}
+#more #settings li {
+    padding: 0;
+    margin-right: 10px;
+}
+#more #settings li:first-child span {
+    margin-top: -10px;
+}
+#more #explore ul {
+    background-color: white;
+}
+#more #explore ul li {
+    padding: 2px;
+}
+#more #explore ul li:first-child {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(0, 0, 0, .5);
+}
+#more #explore ul li:last-child {
+    margin-left: 20px;
+}
+#explore li {
+    vertical-align: baseline;
+}
+#zoom {
+    float: right;
+}
+#zoom ul {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    margin-bottom: 10px;
+}
+#zoom li {
+    padding: 5px;
+    margin: 0;
+    background-color: white;
+}
+#zoom li:first-child {
+    margin-bottom: 20px;
+}
+#zoom li:last-child {
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    padding-top: 4px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 11px;
+    background-color: rgba(232, 232, 232, .5);
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+footer ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+footer ul li {
+    display: inline-block;
+    padding: 0 4px
+}
+footer span {
+    padding-left: 5px;
+    display: inline-block;
+    width: 180px;
+}
