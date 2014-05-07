@@ -3,8 +3,4 @@ This repository contains examples, documents, slides, and other resources for Co
 
 See the [wiki][wiki] for more.
 
-SEO!
-
-
-
 [wiki]: https://github.com/PitchEngine/code-wyoming/wiki "Code Wyoming Wiki"
