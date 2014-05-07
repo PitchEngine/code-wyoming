@@ -1,12 +1,3 @@
-# Itinerary
-## New Laptops
-* Install brackets
-    * Emmet
-    * Beautify
-* Google drive?
-
-## Review
-
 ### Glossary
 * html
 * css
@@ -37,7 +28,7 @@
 
 ### Quiz
 1. Which tags are self closing?
-2. What tag goes at the top of every webpage?
+2. What "tag"" goes at the top of every webpage?
 3. What separates CSS selectors when selecting multiple elements (ie, selecting all p and h3 to be white)
 4. What are the two kinds of lists?
 * How do you nest a list within a list?
@@ -73,26 +64,3 @@
 * What three values are used with the css property "border"?
 * What is prioritized list of fonts that the browser will cycle through until it finds a font that is installed on the user’s computer called 
 * Two html elements make text italic ( "i" and "em"). What CSS property does the same?
-
-
-## id, class, div, span and css clarification
-Clear up some confusion that came from mixed up teaching.
-###D.R.Y.! 
-
-## em vs px
-Don't forget REM
-
-## New topics
-### CSS Selectors: Finishing up
-* Sibling selectors (+ and ~)
-* Pseudo classes
-* Pseudo elements (first-line, first-letter, before, after)
-
-
-### CSS Properties
-* Width
-* Height
-* Doesn't work on inline items
-
-### Box Model
-
