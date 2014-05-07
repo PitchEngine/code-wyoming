@@ -1,4 +1,6 @@
-# Questions for Student
+# Questions for Students
+
+These are things we like to know about our students
 
 ## About You
 * tell me about yourself
@@ -7,7 +9,6 @@
 * What will be your biggest obstacle in this class
 * what do you consider to be you was your most important idea or contribution to your last job
 * give an example of how you solved a work related problem in the past
-* give an example of a time you showed leadership and initiative
 * what have you done to develop or change in the last few years
 
 ## Computing questions
