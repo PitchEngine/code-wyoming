@@ -1,0 +1,31 @@
+body {
+    background-image: url(/unsplash/smoke.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    /* alternatively:background: url(/unsplash/smoke.jpg) / cover fixed;*/
+    color: #DDD;
+}
+header {
+    padding: 20px;
+    line-height: 150%;
+    width: 300px;
+}
+h1,
+h2 {
+    color: #EEE;
+    text-align: right;
+    font-family: monospace;
+}
+main {
+    margin-top: -60px;
+    width: 400px;
+    padding: 20px;
+    padding-left: 325px;
+}
+p {
+    text-align: justify;
+}
+a {
+    color: #E85220;
+    text-decoration: none;
+}

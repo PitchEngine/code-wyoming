@@ -1,0 +1,62 @@
+/* see mockups/css-shapes.jpg */
+
+html,
+body,
+h1,
+h2 {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #888;
+}
+header {
+    background-color: black;
+    color: white;
+}
+header h1 {
+    padding: 30px 50px;
+    ;
+    font-family: sans-serif;
+}
+header h1 span {
+    color: #4C4C4C;
+    text-transform: uppercase;
+}
+.links {
+    padding-top: 40px;
+    float: right;
+}
+.links a {
+    color: white;
+    text-decoration: none;
+}
+main {
+    width: 60%;
+    max-width: 900px;
+    min-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #EEE;
+}
+main h2 {
+    font-weight: bold;
+    font-size: 5em;
+    font-family: serif;
+    font-style: italic;
+}
+main h2 span {
+    color: #F22;
+}
+main p {
+    font-family: monospace;
+}
+main h3 {
+    margin-left: -40px;
+    margin-right: -40px;
+    background-color: #DDD;
+    padding: 20px 80px;
+    font-size: 2em;
+    font-style: italic;
+}

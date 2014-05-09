@@ -1,0 +1,51 @@
+
+    html, body, h1, h2, h3, ul {
+        margin: 0;
+        padding: 0;
+    }
+    h1,h2,h3 {
+        color: #FD8634;
+    }
+    a {
+        color: #42F;
+        text-decoration: none;
+        font-weight:700;
+    }
+    header {
+        background: black;
+        border-bottom: 10px groove blue; 
+        padding: 20px 80px 0px;
+        box-shadow: 0px 0px 50px -5px;
+    }
+    header h2 {
+        color: #AAACAA;
+        margin-bottom:20px;
+    }
+    header ul {
+        text-align: right;
+    }
+    header li {
+        display:inline-block;
+        padding: 5px 10px 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #333;
+        color: #DDD;
+        
+        font-weight: bold;
+    }
+    header li.active {
+        background-color: #FFF;
+        color: #000;
+        text-transform: uppercase;
+    }
+    main {
+        width:80%;
+        max-width: 740px;
+        margin: 40px auto;
+    }
+    
+    main h2 {
+        text-transform: uppercase;
+        font-family: sans-serif;
+    }
