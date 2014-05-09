@@ -16,7 +16,6 @@ header {
 }
 header h1 {
     padding: 30px 50px;
-    ;
     font-family: sans-serif;
 }
 header h1 span {
@@ -32,13 +31,13 @@ header h1 span {
     text-decoration: none;
 }
 main {
-    width: 60%;
-    max-width: 900px;
-    min-width: 600px;
-    margin: 100px auto;
-    padding: 40px;
+    width: 560px;
+    margin: 80px auto;
     border-radius: 20px;
     background-color: #EEE;
+}
+main .content {
+    padding: 30px 40px;
 }
 main h2 {
     font-weight: bold;
@@ -53,8 +52,6 @@ main p {
     font-family: monospace;
 }
 main h3 {
-    margin-left: -40px;
-    margin-right: -40px;
     background-color: #DDD;
     padding: 20px 80px;
     font-size: 2em;
