@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floating</title>
+    <style>
+    html, body {
+        margin:0; padding:0; background:#DDD;
+    }
+    #wrapper {
+        width:640px;
+        margin:20px auto;
+        background: white;
+    }
+    h1 {
+        text-align:center;
+        text-transform: capitalize;
+    }
+    img {
+        float: right;
+    }
+    .clear-right {
+        clear:both;
+    }
+    
+    .right {
+        float:right;
+    }
+    .left {
+        float:left;
+    }
+    .right,.left { border: 1px dotted red; margin: 2px 10px;}
+    
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>learning about floats</h1>
+        <img src="//placekitten.com/200/300" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, earum alias porro harum quos cum iusto natus asperiores quis quibusdam.</p>
+        <h2 class="clear-right">Learning about clear</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, harum, impedit, natus voluptate ducimus deleniti corrupti laborum nostrum sapiente quae cumque aliquid sed aspernatur libero fugit ut accusamus minus praesentium aliquam perferendis maxime in recusandae vero assumenda commodi quis eius molestiae consequatur odio quisquam? Mollitia eaque aperiam quos eum commodi!</p>
+        
+        <h2>Floating lots of stuff</h2>
+        <p class="right">1</p>
+        <p class="left">2</p>
+        <p class="right">3</p>
+        <p class="clear-right">Floating right can apparently "reverse" the order of elements!</p>
+    </div>
+</body>
+</html>
