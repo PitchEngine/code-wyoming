@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Absolute Boxed</title>
+    <style>
+    main{
+        width: 75%;
+        margin: 100px auto;
+        background: #DDD;
+        min-height:200px;
+    }
+    div {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+    .box1 {
+        top:-50px; left:45%;
+        background: red;
+    }
+    .box2 {
+        top:45%; right: 0;
+        background: blue;
+    }
+    .box3 {
+        bottom: 0; left: 0;
+        background: green;
+    }
+    .box4 {
+        bottom: 0; right: 0;
+        background:black;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </main>
+</body>
+</html>
