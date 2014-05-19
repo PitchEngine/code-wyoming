@@ -3,6 +3,31 @@
     margin: 0;
     box-sizing: border-box;
 }
+button {
+    display: inline-block;
+    border: solid 2px #DDD;
+    padding: .2em 2em;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #EEE, #FFF 20%, #FFF 80%, #EEE);
+    height: 2em;
+    
+    font-family: Garamond;
+    font-size: 1.1em;
+}
+h2 {
+    margin-bottom: 1em;
+}
+p {
+    margin: 1em 0;
+}
+a {
+    color: #000;
+    background-color: rgb(248, 248, 248);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
 p, a {
     font-family: sans-serif;
     font-size: .9em;
@@ -48,6 +73,7 @@ header nav li {
 header nav li a {
     color: white;
     text-decoration: none;
+    background-color: inherit;
 }
 header .tagline {
     width: 60%;
@@ -63,14 +89,6 @@ header .tagline {
 */
 main {
     color: #444;
-}
-main a {
-    color: #000;
-    background-color: rgb(248, 248, 248);
-    text-decoration: none;
-}
-main a:hover {
-    text-decoration: underline;
 }
 main section {
     margin: 2em 0;
@@ -113,11 +131,7 @@ Campaign Text
     width: 40%;
 }
 .campaigns h2 {
-    margin-bottom: 1em;
     text-align: center;
-}
-.campaigns p {
-    margin: 1em 0;
 }
 .campaigns p:first-of-type {
     text-indent: 2em;
@@ -141,31 +155,60 @@ DONATE
 ====================
 */
 .donate {
-    border: 5px solid #555;
-    border-bottom: none;
-    border-top: none;
     padding: 0px 1em;
-    overflow:auto;
+    overflow: hidden;
+    height: 14em;
 }
-.donate:nth-child(odd) {
-    border-right: none;
-}
-.donate:nth-child(even) {
-    border-left: none;
+.donate, .donate aside {
+    border-left: 5px solid #555;
 }
 .donate .donate-form, .donate aside {
     float: left;
+    height: 100%;
 }
 .donate-form {
-    width: 60%;
+    width: 40%;
 }
 .donate-form .form-group {
-    
+    margin-top:1em;
+    line-height: 2em;
 }
-aside {
-    width: 17.5%;
-    margin-left: 2.5%;
+.donate-form .form-group input{
+    float:right;
+    width: 75%;
+    height: 2em;
+    box-shadow: inset 0px 0px 15px -1px #999;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
 }
+.donate-form button {
+    float: right;
+    margin-top: 1em;
+}
+aside.feedback {
+    width: 22.5%;
+    padding-left: 35px;
+    margin-left: 7.5%;
+    position: relative;
+}
+aside.feedback img {
+    position: absolute;
+    left: -25px; top: 50px;
+}
+
+footer {
+    border-top: 5px solid #555;
+}
+footer ul {
+    float: left;
+    width: 25%;
+    padding:2em;
+}
+footer nav li {
+    list-style: none;
+}
+
 @media screen and (max-width:58em) {
     .campaigns p:nth-of-type(2) {
         display: none;
