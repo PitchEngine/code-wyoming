@@ -1,0 +1,114 @@
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #00005D;
+}
+h2 {
+    color: #869dc7;
+    font-family: arial, sans-serif;
+    margin: 5px;
+}
+#wrapper {
+    background-color: #b3c7e6;
+    color: #000066;
+    width: 80%;
+    margin: auto;
+}
+
+/* 
+   ===================================================
+       HEADER
+   ===================================================
+*/
+header {
+    background-color: #869dc7;
+    color: #00005D;
+    padding: 10px;
+}
+header h1 {
+    padding-left: 20px;
+}
+header h2 {
+    margin-top: 0;
+    padding-right: 20px;
+    font-size: .80em;
+    font-style: italic;
+    text-align: right;
+    color: #00005D;
+}
+/* 
+   ===================================================
+       NAV
+   ===================================================
+*/
+nav {
+    float: left;
+    width: 150px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    padding: 15px;
+}
+nav a {
+    text-decoration: none;
+}
+nav a:link {
+    color: #ffffff;
+}
+nav a:visited {
+    color: #eaeaea;
+}
+nav a:hover {
+    color: #869dc7;
+}
+
+/* 
+   ===================================================
+       CONTENT
+   ===================================================
+*/
+main {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    overflow: auto;
+}
+figure {
+    float: right;
+    margin: 10px;
+    padding-left: 20px;
+}
+figcaption {
+    text-align: center;
+    font-size: .8em;
+    font-style: italic;
+}
+/* 
+   ===================================================
+       FOOTER
+   ===================================================
+*/
+
+footer {
+    font-size: 70%;
+    text-align: center;
+    padding: 10px;
+    background-color: #869dc7;
+    clear: both;
+}
+
+/* 768px
+Remove the margin from body
+Set the #wrapper to take up the whole screen.
+Make the nav into a horizontal nav across the top of the screen*/
+
+/* 480px
+Return li's to their natural state of being block elements'.
+Put a 2px ridge #00005D border-bottom on the LI
+Make the nav have slightly larger text ~1.2em
+ */
