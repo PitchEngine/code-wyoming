@@ -102,12 +102,12 @@ footer {
     clear: both;
 }
 
-/* 768px
+/* 48em
 Remove the margin from body
 Set the #wrapper to take up the whole screen.
 Make the nav into a horizontal nav across the top of the screen*/
 
-/* 480px
+/* 30em
 Return li's to their natural state of being block elements'.
 Put a 2px ridge #00005D border-bottom on the LI
 Make the nav have slightly larger text ~1.2em
