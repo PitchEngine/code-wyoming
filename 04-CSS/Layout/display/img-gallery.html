@@ -5,41 +5,45 @@
     <meta charset="UTF-8">
     <title>CSS Gallery</title>
     <style>
-        .thumb{width:150px; height:auto;}
-        .full{width:500px; height: auto;}
-        
-        #gallery{ 
-            position: relative; 
-            width:80%;
-            margin:0 auto;
+        .thumb {
+            width: 150px;
+            height: auto;
         }
-        #gallery ul{ 
-            width: 300px; 
-            list-style-type:none;
+        .full {
+            width: 500px;
+            height: auto;
         }
-        #gallery li{ 
-            padding:10px;
+        #gallery {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+        }
+        #gallery ul {
+            width: 300px;
+            list-style-type: none;
+        }
+        #gallery li {
+            padding: 10px;
         }
         #gallery img {
-            border-style:none;    
+            border-style: none;
         }
-        #gallery a{
-            text-decoration:none;
-            color:#333;
-            font-style:italic;
+        #gallery a {
+            text-decoration: none;
+            color: #333;
+            font-style: italic;
         }
-        
         /** The Magic **/
-        #gallery span{
-            display:none;
+        #gallery span {
+            display: none;
         }
-        
-        #gallery li:hover span{ /*compare with a:hover */
-            display:block;
-            position:absolute;
-            right:0px;
-            top:10px;
-            text-align:center;
+        #gallery li:hover span {
+            /*compare with a:hover */
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 10px;
+            text-align: center;
         }
     </style>
 </head>
