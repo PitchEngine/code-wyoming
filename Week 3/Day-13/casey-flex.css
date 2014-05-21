@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+==================
+Generic Element Properties
+==================
+*/
+
+img {
+    /* responsive image! */
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+}
+p {
+    margin: 1em 0;
+}
+a {
+    color: orange;
+    text-decoration: none;
+}
+footer.read-more a::after {
+    content: "\00BB";
+    display: inline-block;
+    margin-left: .2em;
+}
+/*
+===================
+  Framework Classes
+===================
+*/
+
+.gray {
+    background-color: #333;
+}
+.white {
+    background-color: #FFF;
+}
+.black {
+    background-color: #000;
+}
+/*  
+===========
+LAYOUT  
+===========
+*/
+
+.content {
+    margin: auto;
+    max-width: 60em;
+    width: 75%;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+footer.read-more.flex-container {
+    flex-direction: row-reverse;
+}
+.news figure {
+    flex-basis: 30%;
+}
+.featured figcaption,
+.featured .featured-image {
+    flex-basis: 50%;
+}
+.featured .featured-image {
+    order: 1;
+}
