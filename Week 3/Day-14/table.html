@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Our Class</title>
+    <style>
+        table {
+            border-spacing: 5px;
+            
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        tr td {
+            border: 1px solid black;
+            border-left: none;
+            border-right: none;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Code Wyoming Jackson 2014 Class Info</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Hometown</th>
+                <th>Favorite Color</th>
+                <th>Second Favorite Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matt</td>
+                <td>Cheyenne</td>
+                <td colspan="2">Green</td>
+            </tr>
+            <tr>
+                <td>Alex</td>
+                <td>Chicago</td>
+                <td>Blue</td>
+                <td>Black</td>
+            </tr>
+            <tr>
+                <td>Corbett</td>
+                <td>Tyler</td>
+                <td>Orange</td>
+                <td>Blue</td>
+            </tr>
+            <tr>
+                <td>Bre</td>
+                <td>Riverton</td>
+                <td>Green</td>
+                <td>Orange</td>
+            </tr>
+            <tr>
+                <td>Susan</td>
+                <td>Seattle</td>
+                <td colspan="2">White</td>
+            </tr>
+            <tr>
+                <td>Dave</td>
+                <td>Buffalo</td>
+                <td>Fuschia</td>
+                <td>Aquamarine</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        console.log("herrooo");
+        var tds = document.getElementsByTagName('td');
+        for (var i = 0; i < tds.length; i++) {
+            tds[i].style.color = tds[i].innerHTML;
+        }
+    </script>
+</body>
+
+</html>
