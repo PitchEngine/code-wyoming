@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations</title>
+    
+    <style>
+    div {
+        display: inline-block;
+        margin: 50px;
+        width: 200px;
+        height: 200px;
+        border: 5px solid #DDD;
+        background-color: #666;
+    }
+    .oscillate {
+        -webkit-animation: oscillate 2s infinite cubic-bezier(-1, -1, 1.5, 1.5);
+    }
+    
+    @-webkit-keyframes oscillate {
+        25% {
+            -webkit-transform: scale(1.5);
+        }
+        75% {
+            -webkit-transform: scale(.666666666666);
+        }
+    }
+    
+    .jumper {
+        border: none;
+        background-color: white;
+        background-image: url(http://bestbaitforfishing.com/wp-content/uploads/2012/01/best-bait-for-fishing-bass2.jpg);
+        background-size:contain;
+        background-repeat: no-repeat;
+        -webkit-animation: fish 5s 10s infinite;
+    }
+    .water {
+        background-color: blue;
+        width:120%;
+        position: absolute;
+        height: 400px;
+        top: 200px;
+        left: -200px;
+        border: none;
+    }
+    @-webkit-keyframes fish {
+        from {
+            -webkit-transform: rotate(0) translateX(0) rotate(0);
+        }
+        to {
+            -webkit-transform: rotate(180deg) translateX(-400px) rotate(-145deg);
+        }
+    }
+    </style>
+</head>
+<body style="padding-top: 200px;">
+    <!-- <div class="oscillate"></div> -->
+    <div class="jumper"></div>
+    <div class="water">
+        <!-- <div class="lily"></div> -->
+    </div>
+</body>
+</html>
