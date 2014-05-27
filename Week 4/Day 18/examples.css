@@ -38,6 +38,16 @@ NESTING
 #header .logo {
   width: 300px;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+a:visited {
+  color: gray;
+}
+a:hover {
+  font-weight: bold;
+}
 .clearfix {
   display: block;
   zoom: 1;
