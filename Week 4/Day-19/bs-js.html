@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+</head>
+
+<body class="container">
+    <h1>Bootstrap Components &amp; Javascript</h1>
+    <h2>Dropdowns</h2>
+    <div class="dropdown">
+        <a href="#" class="btn btn-success" data-toggle="dropdown">Try me too</a>
+        <ul class="dropdown-menu">
+            <li><a href="http://getbootstrap.com/components/#dropdowns">Learn about styling dropdowns</a>
+            </li>
+            <li><a href="#">Item #1</a>
+            </li>
+            <li><a href="#">Item #2</a>
+            </li>
+            <li><a href="#">Item #3</a>
+            </li>
+            <li><a href="#">Item #4</a>
+            </li>
+        </ul>
+    </div>
+
+    <h2>Tabs</h2>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#home" data-toggle="tab">Home</a>
+        </li>
+        <li><a href="#profile" data-toggle="tab">Profile</a>
+        </li>
+        <li><a href="#messages" data-toggle="tab">Messages</a>
+        </li>
+        <li><a href="#settings" data-toggle="tab">Settings</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="home">Lorem ipsum dolor sit amet.</div>
+        <div class="tab-pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, accusamus!</div>
+        <div class="tab-pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, est dicta qui minima amet rem temporibus unde sed sint sunt!</div>
+        <div class="tab-pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde est placeat praesentium natus quo doloremque accusantium cupiditate. Ex, dolorum, veritatis fugiat dicta rerum blanditiis quos nesciunt repellat eum consequatur aliquid.</div>
+    </div>
+
+    <h3>Fading Tabs</h3>
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#homeF" data-toggle="tab">Home</a>
+        </li>
+        <li><a href="#profileF" data-toggle="tab">Profile</a>
+        </li>
+        <li><a href="#messagesF" data-toggle="tab">Messages</a>
+        </li>
+        <li><a href="#settingsF" data-toggle="tab">Settings</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="homeF">Lorem ipsum dolor sit amet.</div>
+        <div class="tab-pane fade" id="profileF">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, accusamus!</div>
+        <div class="tab-pane fade" id="messagesF">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, est dicta qui minima amet rem temporibus unde sed sint sunt!</div>
+        <div class="tab-pane fade" id="settingsF">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde est placeat praesentium natus quo doloremque accusantium cupiditate. Ex, dolorum, veritatis fugiat dicta rerum blanditiis quos nesciunt repellat eum consequatur aliquid.</div>
+    </div>
+
+    <h2>Collapse</h2>
+    <h3>Simple</h3>
+    <button data-toggle="collapse" data-target="#collapse-me" class="btn btn-primary">Push the button.</button>
+    <div class="collapse" id="collapse-me">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, omnis, ex dignissimos esse culpa neque reprehenderit quod nulla qui dolores velit et totam tempora! Numquam, mollitia et magni animi eum.</div>
+    <h3>Panels</h3>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/jquery/jquery-2.1.1.js?theseus=no"></script>
+    <script src="/bootstrap/js/bootstrap.js?theseus=no"></script>
+</body>
+
+</html>
