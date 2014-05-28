@@ -52,7 +52,7 @@ a:hover {
   display: block;
   zoom: 1;
 }
-.clearfix:after {
+.clearfix::after {
   content: " ";
   display: block;
   font-size: 0;
