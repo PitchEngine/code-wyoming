@@ -54,28 +54,19 @@ LAYOUT
     max-width: 60em;
     width: 75%;
 }
-.flex-container {
+.flex-container{
     display: flex;
     justify-content: space-between;
 }
-.flex-column {
-    display: flex;
-    flex-direction: column;
+footer.read-more.flex-container {
+    flex-direction: row-reverse;
 }
-/* News */
 .news figure {
     flex-basis: 30%;
 }
-.news figcaption {
-    flex-grow: 1;
-}
-.news figure footer.read-more {
-    margin-top: auto;
-}
-/* Featured image */
 .featured figcaption,
 .featured .featured-image {
-    flex-basis: 50%;
+    flex-basis: 47.5%;
 }
 .featured .featured-image {
     order: 1;
