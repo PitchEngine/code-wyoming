@@ -38,6 +38,14 @@ NESTING
 #header .logo {
   width: 300px;
 }
+header {
+  background-image: url(//lorempixel.com/400/200);
+}
+@media only screen and (min-width: 40em) {
+  header {
+    background-image: url(//lorempixel.com/1200/800);
+  }
+}
 a {
   text-decoration: none;
   color: white;
