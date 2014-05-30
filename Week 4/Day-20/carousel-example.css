@@ -10,7 +10,15 @@ nav.navbar {
     margin: auto;
 }
 
+main .row {
+    padding-bottom: 3em;
+    border-bottom: 1px solid rgba(0,0,0, .2);
+}
 
 main > div {
-    margin-top: 5em;
+    margin-top: 3em;
+}
+
+footer {
+    line-height: 5em;
 }
