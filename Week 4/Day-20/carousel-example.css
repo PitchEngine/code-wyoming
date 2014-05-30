@@ -1,0 +1,16 @@
+nav.navbar {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 1em;
+    z-index: 99999999;
+}
+
+.carousel img {
+    margin: auto;
+}
+
+
+main > div {
+    margin-top: 5em;
+}
