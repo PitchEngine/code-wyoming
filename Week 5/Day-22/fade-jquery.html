@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faded</title>
+    <style>
+    * {
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+    button {
+        display: block;
+        height: 20vh;
+        width: 100vw;
+        background-color: steelblue;
+    }
+    div#target {
+        padding: 50px;
+        height: 80vh;
+        transition: opacity 2s;
+        background-color: black;
+        color: white;
+    }
+    .faded {
+        opacity: 0;
+    }
+    </style>
+</head>
+<body>
+    <div id="target"><h1>Fade me</h1></div>
+    <button>Toggle Fade</button>
+    
+    <script src="/jquery/jquery-2.1.1.js"></script>
+    <script>
+        var target = $('#target');
+        var button = $('button');
+        var toggleFaded = function () {
+            target.toggleClass('faded');
+        }
+        button.click(toggleFaded);
+        //OR like this
+        /*
+        $('button').click(function (){
+            $('#target').toggleClass('faded');
+        });
+        */
+    </script>
+</body>
+</html>

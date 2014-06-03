@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>highlights</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <style>
+        ul {
+            padding-left: 0;
+        }
+        li {
+            transition: all .5s;
+            list-style:none;
+            padding-left: 30px;
+        }
+        li.highlight {
+            color: white;
+        }
+        li.highlight:nth-child(even) {
+            background-color: #C55;
+        }
+        li.highlight:nth-child(odd) {
+            background-color: #22F;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="evens">Highlight Evens</button>
+    <button id="odds">Highlight Odds</button>
+    <ul>
+        <li>Item #1</li>
+        <li>Item #2</li>
+        <li>Item #3</li>
+        <li>Item #4</li>
+        <li>Item #5</li>
+        <li>Item #6</li>
+        <li>Item #7</li>
+        <li>Item #8</li>
+        <li>Item #9</li>
+        <li>Item #10</li>
+        <li>Item #11</li>
+        <li>Item #12</li>
+        <li>Item #13</li>
+        <li>Item #14</li>
+        <li>Item #15</li>
+        <li>Item #16</li>
+        <li>Item #17</li>
+        <li>Item #18</li>
+        <li>Item #19</li>
+        <li>Item #20</li>
+    </ul>
+
+    <script src="/jquery/jquery-2.1.1.js"></script>
+    <script>
+        var evenItems = $('li:nth-child(even)');
+        var oddItems = $('li:nth-child(odd)');
+        $('#evens').click(function () {
+            oddItems.removeClass('highlight');
+            evenItems.addClass('highlight');
+        });
+        $('#odds').click(function () {
+            evenItems.removeClass('highlight');
+            oddItems.addClass('highlight');
+        });
+        
+        /*
+        var uberClick = function (oddOrEven) {
+            return function () {
+                $('li:nth-child(' + oddOrEven + ')').toggleClass();
+            }
+        }
+        $('#evens').click(uberClick('even'));
+        $('#odds').click(uberClick('odd'));
+        */
+    </script>
+</body>
+
+</html>
