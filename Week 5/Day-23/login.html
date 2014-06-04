@@ -27,7 +27,7 @@
             padding: .3em 1em;
         }
         input {
-            flex:2 0 40%;
+            width: 40%;
             max-width: 15em;
             border-radius: 3px;
             border: none;
@@ -35,9 +35,10 @@
             background-color: #484c50;
         }
         button.btn {
-            flex:1 1 20%;
-            max-width: 5em;
+            width: 20%;
+            max-width: 7em;
             margin-left: 1em;
+            text-transform: uppercase;
         }
         input:first-child {
             border-top-right-radius: 0;
@@ -48,8 +49,34 @@
             border-bottom-left-radius: 0;
             margin-left: .2em;
         }
-        aside a {
+        footer a {
             color: #666;
+        }
+        aside {
+            position: absolute;
+            bottom: 3em;
+            left: 3em;
+            background-color: #e25440;
+            color: white;
+            padding-right: 1em;
+            line-height: 2em;
+            min-width: 25em;
+            display: none;
+        }
+        aside.show {
+            display: block;
+        }
+        aside.success {
+            background-color: #40e254;
+        }
+        aside::before {
+            display: inline-block;
+            content: "!";
+            width: 2em;
+            padding: 1em;
+            font-size: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            margin-right: .333333333em;
         }
     </style>
 </head>
@@ -57,17 +84,62 @@
 <body>
 
     <div id="wrapper">
-
         <main>
-            <input type="text" placeholder="Email address">
-            <input type="password" placeholder="Password">
+            <input id="email" type="text" placeholder="Email address">
+            <input id="password" type="password" placeholder="Password">
             <button class="btn btn-primary">Sign In</button>
-        <aside>
-            <a href="#forgotten">Forgotten password?</a>
-        </aside>
+            <footer>
+                <a href="#forgotten">Forgotten password?</a>
+            </footer>
         </main>
     </div>
+    <aside>
+        Default warning text.
+    </aside>
 
+    <script src="/jquery/jquery-2.1.1.js"></script>
+    <script>
+        var warnUser = function (message) {
+                $('aside').text(message).addClass('show');
+            },
+            congratulateUser = function (message) {
+                $('aside').text(message).addClass('show success');
+            };
+            
+        //handle a login attempt
+        var login = function () {
+            var email = $('#email').val(),
+                password = $('#password').val();
+
+            //First things first, make sure we have an email.
+            if (!email) { //if email is undefined, null, or the empty string.
+                //  '!' is read as 'not', so "if not email..."
+                warnUser('Bro. Bro. Gotta type that email. C\'mon bro.');
+                return; //bail bro.
+            }
+
+            //Okay, they gave us an email.
+            //Make sure it's a registered user. (make sure it's your email)
+            if (email !== 'me@pitchengine.com') {
+                warnUser('BRO. Unknown email.');
+                return;
+            }
+
+            //Okay okay. It's a valid email! Did he get the password right?
+            if (password === 'password') {
+                //Nailed it! LOGGED IN!
+                congratulateUser('You successfully logged in!');
+            } else {
+                warnUser('Sorry man. That password is incorrect');
+            }
+        };
+        //Close warning Box on click
+        $('aside').click(function () {
+            $('aside').removeClass('show success');
+        });
+        //When button is clicked, try a login.
+        $('button').click(login);
+    </script>
 </body>
 
 </html>
