@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+</head>
+<body>
+    <button>Increment Number of Unread Emails</button>
+    
+    <script src="/jquery/jquery-2.1.1.js"></script>
+    <script>
+        var title = $('title');
+        
+        //this keeps track of the number of unread emails
+        //add one to it each time the button is clicked.
+        var numEmails = 0;
+        var button = $('button');
+        button.click(function () {
+            //Increase the number of unread emails 
+            numEmails = numEmails + 1;
+            //And update the title.
+            title.text(numEmails + ' Email');
+        });
+        /* Test code
+        var oldText = title.text();
+        var newText = oldText + ' | Title was successfully changed!'
+        title.text(newText); 
+        */
+    </script>
+</body>
+</html>

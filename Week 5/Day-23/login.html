@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost Signin</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <style>
+        body {
+            background-color: #222;
+        }
+        #wrapper {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        input,
+        button.btn {
+            line-height: 2em;
+            font-size: 1.2em;
+            padding: .3em 1em;
+        }
+        input {
+            flex:2 0 40%;
+            max-width: 15em;
+            border-radius: 3px;
+            border: none;
+            color: #FFF;
+            background-color: #484c50;
+        }
+        button.btn {
+            flex:1 1 20%;
+            max-width: 5em;
+            margin-left: 1em;
+        }
+        input:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        input:nth-child(2) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: .2em;
+        }
+        aside a {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <main>
+            <input type="text" placeholder="Email address">
+            <input type="password" placeholder="Password">
+            <button class="btn btn-primary">Sign In</button>
+        <aside>
+            <a href="#forgotten">Forgotten password?</a>
+        </aside>
+        </main>
+    </div>
+
+</body>
+
+</html>
