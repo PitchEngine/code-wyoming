@@ -1,3 +1,4 @@
 *.db
 *.ini
 /Eloquent JavaScript/
+**/node_modules

@@ -1,0 +1,23 @@
+{
+  "name": "form-handler",
+  "version": "0.0.0",
+  "description": "Code wyoming form tester",
+  "main": "index.js",
+  "dependencies": {
+    "express": "~4.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+      "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pitchengine/code-wyoming"
+  },
+  "author": "Matt Enlow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pitchengine/code-wyoming/issues"
+  },
+  "homepage": "https://github.com/pitchengine/code-wyoming"
+}
