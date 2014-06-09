@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkboxing!</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <style>
+        input {
+            display: none;
+        }
+        span.checkbox {
+            display:inline-block;
+            width:10px;
+            height:10px;
+            background-color:black;
+            border:2px solid gray;
+            border-radius:2px;
+            cursor: pointer;
+        }
+        input:checked + span.checkbox {
+            background-color:green;
+        }
+        
+        #eula input#terms ~ h1,
+        #eula input#terms ~ p {
+            display: none;
+        }
+        
+        #eula input#terms:checked ~ h1,
+        #eula input#terms:checked ~ p {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body class="container">
+   
+    <label>
+       <input type="checkbox">
+       <span class="checkbox"></span>
+        Some text
+    </label>
+    <label for="terms">
+       <span class="btn btn-default">Show terms take two</span>
+    </label>
+    <div id="eula">
+       <input type="checkbox" id="terms">
+       <h1>End User License Agreement</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eligendi, dolorem voluptatibus cupiditate. Maiores totam, iusto nisi, minus modi delectus, ipsum veritatis quam nemo obcaecati beatae explicabo officiis tempore, aut?</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt id debitis sequi placeat amet. Praesentium vel, adipisci consectetur doloribus in, maiores porro aspernatur incidunt illum odit enim, quam voluptate non.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt id debitis sequi placeat amet. Praesentium vel, adipisci consectetur doloribus in, maiores porro aspernatur incidunt illum odit enim, quam voluptate non.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt id debitis sequi placeat amet. Praesentium vel, adipisci consectetur doloribus in, maiores porro aspernatur incidunt illum odit enim, quam voluptate non.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt id debitis sequi placeat amet. Praesentium vel, adipisci consectetur doloribus in, maiores porro aspernatur incidunt illum odit enim, quam voluptate non.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt id debitis sequi placeat amet. Praesentium vel, adipisci consectetur doloribus in, maiores porro aspernatur incidunt illum odit enim, quam voluptate non.</p>
+   </div>
+</body>
+</html>
