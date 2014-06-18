@@ -53,6 +53,10 @@
             width: 17em;
             padding-left: .5em;
         }
+        /* checked strikethrough */
+        li.checked .todo {
+            text-decoration: line-through;
+        }
         li label {
             width: 2em;
         }
@@ -68,7 +72,8 @@
             background-color: green;
             border-color: black;
         }
-        span.delete {
+        /* delete button */
+        li span.delete {
             position: absolute;
             display: none;
             right: 0;
@@ -77,7 +82,7 @@
             cursor: pointer;
             transition: .3s;
         }
-        span.delete::before {
+        li span.delete::before {
             content: "x";
             display: block;
         }
@@ -88,14 +93,10 @@
             -webkit-transform: scale(1.3) translateX(1px);
             transform: scale(1.3) translateX(1px);
         }
-        li.checked .todo {
-            text-decoration: line-through;
-        }
     </style>
 </head>
 
 <body>
-
     <div id="wrapper">
         <header>
             <h1>To Do</h1>
@@ -105,38 +106,46 @@
         </header>
         <main>
             <ul>
-                <li>
-                    <label>
-                        <input type="checkbox"><span class="checkbox"></span>
-                    </label>
-                    <span class="todo">Some stuff to do</span>
-                    <span class="delete"></span>
-                </li>
-                <li class="checked">
-                    <label>
-                        <input checked type="checkbox"><span class="checkbox"></span>
-                    </label>
-                    <span class="todo">Lorem ipsum dolor sit amet, consectetur.</span>
-                    <span class="delete"></span>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox"><span class="checkbox"></span>
-                    </label>
-                    <span class="todo">Lorem ipsum dolor sit.</span>
-                    <span class="delete"></span>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox"><span class="checkbox"></span>
-                    </label>
-                    <span class="todo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam.</span>
-                    <span class="delete"></span>
-                </li>
             </ul>
         </main>
         <footer></footer>
     </div>
+    <script src="/jquery/jquery-2.1.1.js"></script>
+    <script>
+        var checkClicker = function () {
+            var isChecked = $(this).find(':checked').length === 1;
+            $(this).parent().toggleClass('checked', isChecked);
+        };
+        $('label').click(checkClicker);
+        
+        var removeParent = function() {
+            $(this).parent().remove();
+        };
+        $('.delete').click(removeParent);
+        var createTodo = function (todo) {
+            var newTodo = $('<li><label><input type="checkbox"><span class="checkbox"></span></label><span class="todo">' + todo + '</span><span class="delete"></span></li>');
+            newTodo.find('label').click(checkClicker);
+            newTodo.find('span.delete').click(removeParent);
+            newTodo.appendTo('ul');
+            //or in one line, to brag about your jquery chaining skills
+//            $('<li><label><input type="checkbox"><span class="checkbox"></span></label><span class="todo">' + todo + '</span><span class="delete"></span></li>')
+//            .find('label').click(checkClicker)
+//                .end()
+//            .find('span.delete').click(removeParent)
+//                .end()
+//            .appendTo('ul');
+        };
+        $('input[type=text]').keypress(function (event) {
+            if (event.which === 13) {
+                var value = this.value;
+                if (value) {
+                    createTodo(value);
+                    this.value = '';
+                }
+            }
+        });
+        
+    </script>
 </body>
 
 </html>
